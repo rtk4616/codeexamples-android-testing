@@ -30,6 +30,8 @@ public class OutgoingCallReceiverTest {
         intent.putExtra(Intent.EXTRA_PHONE_NUMBER, "01234567890");
 
         mReceiver.onReceive(mContext, intent);
+
+        // See MockitoExampleForArgumentCapture for a working argument capture implementation
         // assert that resultData from mReceiver
 
         // what did receiver do?
