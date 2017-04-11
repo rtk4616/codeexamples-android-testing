@@ -15,7 +15,6 @@ public class TolkienCharacter {
     private long notAccessibleField = System.currentTimeMillis();
 
     public TolkienCharacter(String name, int age, Race race) {
-        super();
         this.name = name;
         this.age = age;
         this.race = race;
