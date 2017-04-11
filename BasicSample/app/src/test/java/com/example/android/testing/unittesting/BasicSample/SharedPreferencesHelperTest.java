@@ -89,7 +89,7 @@ public class SharedPreferencesHelperTest {
                 + "correctly",
                 mSharedPreferenceEntry.getDateOfBirth(),
                 is(equalTo(savedSharedPreferenceEntry.getDateOfBirth())));
-        fail("Also check that email was saved")
+        fail("Also check that email was saved");
     }
 
     @Test
