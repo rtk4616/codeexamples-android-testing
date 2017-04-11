@@ -2,13 +2,11 @@ package com.vogella.android.test.juntexamples;
 
 import com.vogella.android.test.juntexamples.model.TolkienCharacter;
 
-import org.junit.Assume;
 import org.junit.Test;
 
 import java.util.List;
 
 import static com.vogella.android.test.juntexamples.model.Race.HOBBIT;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -62,7 +60,7 @@ public class DataModelTests {
         DataService dataService = new DataService();
         List<TolkienCharacter> fellowship = dataService.getFellowship();
 
-        // ensure that Frodo and Gandalf are part of the fellowship
+        // test that at least one ring bearer is part of the fellowship
         assertTrue(false);
     }
 
