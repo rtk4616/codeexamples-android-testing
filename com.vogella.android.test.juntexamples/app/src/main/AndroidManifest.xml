@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity"></activity>
+        <receiver android:name=".OutgoingCallReceiver"></receiver>
     </application>
 
 </manifest>
