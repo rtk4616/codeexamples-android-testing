@@ -19,7 +19,6 @@ package com.example.android.testing.espresso.DataAdapterSample;
 import android.support.test.espresso.DataInteraction;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.action.ViewActions;
-import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
@@ -30,12 +29,13 @@ import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.assertion.ViewAssertions.doesNotExist;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasEntry;
 import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.fail;
 
 /**
  * Tests to verify that the behavior of {@link LongListActivity} is correct.
@@ -67,16 +67,15 @@ public class LongListActivityTest {
      */
     @Test
     public void lastItem_NotDisplayed() {
-        // last item should not exist if the list wasn't scrolled down.
-        onView(withText(LAST_ITEM_ID)).check(doesNotExist());
+        // test that the LAST_ITEM_ID view does not exit as the list wasn't scrolled down.
+        fail("TODO");
     }
 
-    /**
-     * Check that the LAST_ITEM_ID item is created. use helper method onRow() (see below)
-     */
     @Test
     public void list_Scrolls() {
+        // Check that the LAST_ITEM_ID item is created. use helper method onRow() (see below)
         // matches(isCompletelyDisplayed()) can be used to check if the item is present
+        fail("TODO");
     }
 
     /**
@@ -84,10 +83,10 @@ public class LongListActivityTest {
      */
     @Test
     public void row_Click() {
-        // Click on view with R.id.rowContentTextView) in row TEXT_ITEM_30.
-
+        // Click on view with R.id.rowContentTextView in row TEXT_ITEM_30.
+        fail("TODO");
         // Check that the activity detected the click on the first column.
-        onView(ViewMatchers.withId(R.id.selection_row_value))
+        onView(withId(R.id.selection_row_value))
                 .check(matches(withText(TEXT_ITEM_30_SELECTED)));
     }
 
@@ -95,21 +94,23 @@ public class LongListActivityTest {
     @Test
     public void toggle_Click() {
         // Click on the R.id.rowToggleButton toggle button in row TEXT_ITEM_30
-
-        // Check that the toggle button is checked.
+        fail("TODO");
+        // Check that the R.id.rowToggleButton toggle button is checked.
         // use matches(isChecked()
+        fail("TODO");
     }
 
 
     @Test
     public void toggle_ClickDoesntPropagate() {
         // Click on the rows with TEXT_ITEM_30 on the child view with ID R.id.rowContentTextView
-
-        // Click on the toggle button, in the TEXT_ITEM_60 row.
-
-        // Check that the activity didn't detect the click on the first column.
-        onView(ViewMatchers.withId(R.id.selection_row_value))
-                .check(matches(withText(TEXT_ITEM_30_SELECTED)));
+        fail("TODO");
+        // Click on the R.id.rowToggleButton toggle button, in the TEXT_ITEM_60 row.
+        fail("TODO");
+        // the toogle button should have consumed the click event
+        // check that the activity didn't update the R.id.selection_row_value
+        // it should still contain TEXT_ITEM_30_SELECTED
+        fail("TODO");
     }
 
 
