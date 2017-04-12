@@ -36,7 +36,7 @@ public class RobolectricActivityTest {
         TextView textView = (TextView) activity.findViewById(R.id.hello_textview);
         int bottomMargin = ((LinearLayout.LayoutParams) textView.getLayoutParams()).bottomMargin;
         assertEquals(5, bottomMargin);
-        fail("top should be 5, right 10 and left 10");
+        fail("Check that margin top is 5, margin right 10 and margin left 10");
     }
 
 
@@ -69,4 +69,6 @@ public class RobolectricActivityTest {
         assertThat(ShadowToast.getTextOfLatestToast(), equalTo("Lala") );
     }
 
+    // TODO - Write Espresso Test for this Robolectric test
+    // Compare runtime, which one is faster?
 }
