@@ -28,16 +28,18 @@ public class ChangeTextBehaviorTest {
 
     @Test
     public void changeText_sameActivity() {
-        // Type STRING_TO_BE_TYPED into R.id.editTextUserInput and call
-        // Then press the button and call closeSoftKeyboard
+        // Type STRING_TO_BE_TYPED into R.id.editTextUserInput and callcloseSoftKeyboard
+
+        // Then press the button with the R.id.changeTextBt ID
+
 
         // Check that the text was changed the view with R.id.textToBeChanged
     }
 
     @Test
     public void changeText_newActivity() {
-        // Type text and then press the button.
 
+        // Type STRING_TO_BE_TYPED into R.id.editTextUserInput text and then press the R.id.activityChangeTextBtn button.
         // new activity is started, if R.id.show_text_view contains the text
     }
 }
